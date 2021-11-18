@@ -1,4 +1,4 @@
-import Logo from '../../public/Universev2.png';
+import Logo from './assets/images/Universev2.png';
 
 function Header() {
     return (
