@@ -1,10 +1,18 @@
 import HeroBanner from '../components/HeroBanner';
+import Introduction from '../components/Introduction';
+import GroupGallery from '../components/GroupGallery';
+import RoadMap from '../components/RoadMap';
+import MeetTeam from '../components/MeetTeam';
+
 
 function Landing() {
   return (
-    <div className="App">
+    <div className="landing-page bg-[rgba(7,7,7)] inline-block">
       <HeroBanner />
-      <h1 className="text-[60px] px-14 py-12 bg-gray-700 m-4">React App</h1>
+      <Introduction />
+      <GroupGallery />
+      <RoadMap />
+      <MeetTeam />
     </div>
   );
 }

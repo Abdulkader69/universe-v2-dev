@@ -38,3 +38,112 @@ h1, h2, h3, h4, h5, h6 {
   background-color: rgba(0,0,0,0.6);
   z-index: 9;
 }
+.road-map-item::before, .road-map-item::after {
+  position: absolute;
+  content: "";
+  height: 14rem;
+  width: 3.5rem;
+  bottom: 0;
+  left: 3.5rem;
+  border-left: 5px solid rgba(151,82,238);
+  border-bottom: 5px solid rgba(151,82,238);
+  border-radius: 0px 0px 0 25px;
+}
+.road-map-item-inner::before {
+  position: absolute;
+  content: "";
+  height: 5px;
+  width: calc(100% - 16rem);
+  background-color: rgba(151,82,238);
+  bottom: 0;
+  left: 7rem;
+}
+.road-map-item::after {
+  bottom: auto;
+  top: 0;
+}
+.road-map-item:first-child::after {
+  opacity: 0;
+}
+.road-map-item.right::before, .road-map-item.right::after {
+  right: 6.3rem;
+  left: auto;
+  transform: rotateY(180deg);
+}
+.road-map-item.right::after {
+  border-bottom: none;
+  border-top: 5px solid rgba(151,82,238);
+  top: -5px;
+  border-radius: 25px 0px 0px  0px;
+  height: 14rem;
+  right: 6.3rem;
+}
+.road-map-item:last-child::before {
+  opacity: 0;
+}
+.road-map-item:last-child .road-map-item-inner::before {
+  opacity: 0;
+}
+.road-map-item.left::after {
+  transform: rotateX(180deg);
+  top: -5px;
+  height: 7.3rem;
+}
+.react-multiple-carousel__arrow {
+  display: none;
+}
+.react-multi-carousel-dot-list {
+  bottom: 1rem;
+}
+.react-multi-carousel-dot button {
+  width: 25px !important;
+  height: 25px !important;
+  background-color: transparent !important;
+  position: relative;
+}
+.react-multi-carousel-dot button::before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 3px;
+  top: 3px;
+  border-radius: 50%;
+  background-color: rgb(151 82 238);
+  opacity: 0;
+}
+.react-multi-carousel-dot.react-multi-carousel-dot--active button::before {
+  opacity: 1;
+}
+
+
+
+@media screen and (max-width: 1279px) {
+  .road-map-item::before, .road-map-item::after {
+    height: 12rem;
+  }
+  .road-map-item.right::after {
+    height: 12rem;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .road-map-item::before, .road-map-item::after {
+    height: 10rem;
+  }
+  .road-map-item.right::after {
+    height: 10rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .road-map-item::before, .road-map-item::after {
+    display: none;
+  }
+  .road-map-item.right .road-map-item-inner {
+    flex-flow: column-reverse;
+  }
+  .road-map-item-inner::before {
+    width: 100%;
+    left: 0;
+    height: 3px;
+  }
+}
