@@ -4,6 +4,7 @@ import GroupGallery from '../components/GroupGallery';
 import RoadMap from '../components/RoadMap';
 import MeetTeam from '../components/MeetTeam';
 import AccordionTab from '../components/AccordionTab';
+import VideoCarousel from '../components/VideoCarousel';
 
 
 function Landing() {
@@ -11,6 +12,7 @@ function Landing() {
     <div className="landing-page">
       <HeroBanner />
       <Introduction />
+      <VideoCarousel />
       <GroupGallery />
       <RoadMap />
       <MeetTeam />

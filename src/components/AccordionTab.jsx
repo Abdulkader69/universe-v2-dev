@@ -20,9 +20,9 @@ const accordions = [
 
 function AccordionTab() {
     return (
-        <div className="accordion-section-wrap relative z-10 mb-40 overflow-hidden">
+        <div className="accordion-section-wrap relative z-10 lg:mb-40 md:mb-32 mb-20 overflow-hidden">
         <div className="w-full max-w-container m-auto px-4">
-            <h2 className="lg:text-5xl md:text-4xl text-3xl xl:mb-20 lg:mb-16 mb-14 uppercase text-center text-white">FAQ'S</h2>
+            <h2 className="lg:text-5xl md:text-4xl sm:text-3xl text-2xl xl:mb-20 lg:mb-16 mb-8 uppercase text-center text-white">FAQ'S</h2>
         </div>
         <div className="px-4 max-w-screen-lg  m-auto">
             {accordions.map((accordion) =>

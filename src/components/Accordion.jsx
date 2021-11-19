@@ -1,13 +1,9 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 
 function Accordion(props) {
   const [active, setActive] = useState(false);
   const content = useRef(null);
   const [height, setHeight] = useState("0px");
-
-  useEffect(() => {
-    console.log("Height for ", props.title, ": ", height);
-  }, [height]);
 
   function toggleAccordion() {
     setActive(!active);
@@ -17,11 +13,11 @@ function Accordion(props) {
   return (
     <div className="accordion-item-wrap flex flex-wrap">
       <div
-        className={`accordion w-full cursor-pointer py-5 text-white transition-bg-transition flex items-center justify-between ${active ? "active" : ""}`}
+        className={`accordion w-full cursor-pointer md:py-5 py-4 text-white transition-bg-transition flex items-center justify-between ${active ? "active" : ""}`}
         onClick={toggleAccordion}
       >
-        <p className="accordion-title text-4xl">{props.title}</p>
-        <p className="ml-5 h-10 overflow-hidden flex items-center justify-center"><span className="text-[60px]">{active ? "-" : "+"}</span></p>
+        <p className="accordion-title lg:text-4xl md:text-3xl sm:text-2xl text-xl">{props.title}</p>
+        <p className="ml-5 md:h-10 h-8 md:w-10 w-8 overflow-hidden flex items-center justify-center"><span className="text-[60px]">{active ? "-" : "+"}</span></p>
       </div>
       <div
         ref={content}
@@ -29,7 +25,7 @@ function Accordion(props) {
         className="accordion-content overflow-hidden transition-height-transition w-full"
       >
         <div
-          className="accordion-text text-lg text-white leading-[1.7] pb-5"
+          className="accordion-text md:text-lg text-sm text-white leading-[1.7] pb-5"
           dangerouslySetInnerHTML={{ __html: props.content }}
         />
       </div>

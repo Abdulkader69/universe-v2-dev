@@ -15,5 +15,3 @@ ReactDOM.render(
   </>,
   document.getElementById('root')
 );
-
-//https://github.com/dazzling377/universe2-ui
