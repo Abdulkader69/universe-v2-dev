@@ -25,6 +25,10 @@ module.exports = {
       boxShadow: {
         'gallery': '0px 0px 45px 15px rgb(151 82 238 / 60%)',
         'roadmap': '0px 15px 25px 10px rgba(151, 82, 238, 0.8)',
+      },
+      transitionProperty: {
+        'bg-transition': 'background-color 0.6s ease',
+        'height-transition': 'max-height 0.6s ease',
       }
     },
   },

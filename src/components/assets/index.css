@@ -30,6 +30,9 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Syne Extra', 'Roboto';
 }
+.page-container {
+  background-color: rgba(7,7,7);
+}
 .hero-banner-section::before {
   position: absolute;
   content: "";
@@ -114,6 +117,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 .react-multi-carousel-dot.react-multi-carousel-dot--active button::before {
   opacity: 1;
+}
+.text-shadow {
+  text-shadow: 0px 15px 30px rgb(255 255 255 / 50%);
 }
 
 

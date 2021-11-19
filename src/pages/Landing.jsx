@@ -3,16 +3,18 @@ import Introduction from '../components/Introduction';
 import GroupGallery from '../components/GroupGallery';
 import RoadMap from '../components/RoadMap';
 import MeetTeam from '../components/MeetTeam';
+import AccordionTab from '../components/AccordionTab';
 
 
 function Landing() {
   return (
-    <div className="landing-page bg-[rgba(7,7,7)] inline-block">
+    <div className="landing-page">
       <HeroBanner />
       <Introduction />
       <GroupGallery />
       <RoadMap />
       <MeetTeam />
+      <AccordionTab />
     </div>
   );
 }
